@@ -1,8 +1,9 @@
 import classes from "./CardItem.module.css";
+import Card from "./card";
 
 export default function CardItem(props) {
   return (
-    <div className={classes.card}>
+    <Card>
       <div className={classes.header}>
         <img className={classes.avatar} src={props.avatarImg} alt="avatar" />
 
@@ -26,6 +27,6 @@ export default function CardItem(props) {
         </div>
       </div>
       <button className={classes.button}>View More</button>
-    </div>
+    </Card>
   );
 }

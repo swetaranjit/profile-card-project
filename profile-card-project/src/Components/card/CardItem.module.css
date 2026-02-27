@@ -1,11 +1,4 @@
-.card {
-  width: 320px;
-  padding: 24px;
-  border-radius: 16px;
-  background: white;
-  font-family: system-ui, sans-serif;
-  border: 1px solid #ddd;
-}
+
 
 .header {
   display: flex;
