@@ -1,10 +1,24 @@
 import CardItem from "./CardItem";
 import classes from "./CardList.module.css";
-import abc from "../../assets/images/abs.jpg";
+import {cardData} from "../../data/card-data";
+
 export default function CardList() {
   return (
     <div className={classes.listContainer}>
-      <CardItem
+      {cardData.map((item) => {
+        return (
+          <CardItem
+          key={item.id}
+            name={item.name}
+            email={item.email}
+            location={item.location}
+            experience={item.experience}
+            avatarImg={item.avatarImg}
+            role={item.role}
+          />
+        );
+      })}
+      {/* <CardItem
         name="John Doe"
         email="john@example.com"
         location="Kathmandu,Nepal"
@@ -35,7 +49,7 @@ export default function CardList() {
         experience="4 Years"
         avatarImg={abc}
         role="DevOps Engineer"
-      />
+      />*/}
     </div>
   );
 }
